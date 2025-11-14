@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Trendify")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+739f8dbd3c743d7fc42bc199598babcd8d59fea5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10d99329bfd2c9876078926202d7218330823db8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Trendify")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Trendify")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

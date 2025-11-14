@@ -1,0 +1,201 @@
+﻿@{
+    ViewData["Title"] = "Contact Us - Trendify";
+}
+
+<!-- Hero Section -->
+<section class="hero-section bg-dark text-white py-5 mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-3">Get In Touch</h1>
+                <p class="lead mb-4">We're here to help! Reach out to us with any questions or concerns.</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fas fa-headset fa-5x text-primary"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-lg-4 mb-5">
+                <h2 class="fw-bold mb-4">Contact Information</h2>
+                <div class="contact-info">
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-primary rounded-circle me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h5 class="fw-bold">Address</h5>
+                            <p class="text-muted mb-0">123 Fashion Street<br>New York, NY 10001</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-success rounded-circle me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h5 class="fw-bold">Phone</h5>
+                            <p class="text-muted mb-0">+1 (555) 123-4567<br>Mon-Fri, 9AM-6PM EST</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <div class="bg-warning rounded-circle me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h5 class="fw-bold">Email</h5>
+                            <p class="text-muted mb-0">support@trendify.com<br>sales@trendify.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="mt-5">
+                    <h5 class="fw-bold mb-3">Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-info btn-sm me-2 mb-2">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-danger btn-sm me-2 mb-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-primary btn-sm me-2 mb-2">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-dark btn-sm mb-2">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-primary text-white py-3">
+                        <h4 class="mb-0"><i class="fas fa-paper-plane me-2"></i>Send us a Message</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Choose a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="order">Order Support</option>
+                                    <option value="return">Returns & Refunds</option>
+                                    <option value="shipping">Shipping Information</option>
+                                    <option value="product">Product Questions</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Frequently Asked Questions</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item border-0 shadow-sm mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What is your return policy?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer a 30-day return policy for all items in original condition with tags attached.
+                                Return shipping is free for customers in the US.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 shadow-sm mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                How long does shipping take?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Standard shipping takes 3-5 business days. Express shipping (2-day) is available for an additional fee.
+                                International shipping times vary by location.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 shadow-sm mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Do you offer international shipping?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we ship to over 50 countries worldwide. Shipping costs and delivery times vary by destination.
+                                You can see the exact costs at checkout.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

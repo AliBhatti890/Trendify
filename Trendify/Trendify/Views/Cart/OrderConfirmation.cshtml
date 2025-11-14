@@ -1,0 +1,76 @@
+﻿@model Trendify.Models.Order
+@{
+    ViewData["Title"] = "Order Confirmation - Trendify";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-success">
+                <div class="card-header bg-success text-white text-center">
+                    <h2><i class="fas fa-check-circle me-2"></i>Order Confirmed!</h2>
+                </div>
+                <div class="card-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-box-open fa-4x text-success mb-3"></i>
+                        <h3>Thank You for Your Order!</h3>
+                        <p class="lead">Your order has been successfully placed.</p>
+                    </div>
+
+                    <div class="row text-start mb-4">
+                        <div class="col-md-6">
+                            <h5>Order Details</h5>
+                            <p><strong>Order ID:</strong> #@Model.Id</p>
+                            <p><strong>Order Date:</strong> @Model.OrderDate.ToString("f")</p>
+                            <p><strong>Total Amount:</strong> $@Model.TotalAmount.ToString("0.00")</p>
+                            <p><strong>Payment Method:</strong> @Model.PaymentMethod</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Shipping Information</h5>
+                            <p><strong>Name:</strong> @Model.CustomerName</p>
+                            <p><strong>Address:</strong> @Model.ShippingAddress</p>
+                            <p><strong>City:</strong> @Model.City, @Model.ZipCode</p>
+                            <p><strong>Phone:</strong> @Model.PhoneNumber</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h5>Order Items</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.OrderDetails)
+                                    {
+                                        <tr>
+                                            <td>@item.Product.Name</td>
+                                            <td>@item.Quantity</td>
+                                            <td>$@item.UnitPrice.ToString("0.00")</td>
+                                            <td>$@item.TotalPrice.ToString("0.00")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-block">
+                        <a href="@Url.Action("Index", "Home")" class="btn btn-primary me-2">
+                            <i class="fas fa-home me-2"></i>Continue Shopping
+                        </a>
+                        <a href="@Url.Action("Index", "Products")" class="btn btn-outline-primary">
+                            <i class="fas fa-shopping-bag me-2"></i>Browse More Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

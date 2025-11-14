@@ -1,22 +1,167 @@
-html {
-  font-size: 14px;
+﻿:root {
+    --primary: #4a6de5;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --light: #f8f9fa;
+    --dark: #343a40;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.category-card, .product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+    .category-card:hover, .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    }
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
-body {
-  margin-bottom: 60px;
+    .btn-primary:hover {
+        background-color: #3a5bd0;
+        border-color: #3a5bd0;
+    }
+
+.social-icons a {
+    transition: color 0.3s ease;
+}
+
+    .social-icons a:hover {
+        color: var(--primary) !important;
+    }
+
+.feature-item {
+    padding: 2rem 1rem;
+}
+
+    .feature-item i {
+        transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover i {
+        transform: scale(1.1);
+    }
+
+/* Cart styles */
+.cart-item {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.quantity-input {
+    width: 60px;
+    text-align: center;
+}
+/* Enhanced Styles for Auth Pages */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #4a6de5 0%, #6c8eff 100%) !important;
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+}
+
+.login-icon, .register-icon {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+    .login-icon:hover, .register-icon:hover {
+        transform: scale(1.05);
+    }
+
+/* Contact Page Styles */
+.contact-info .d-flex {
+    transition: transform 0.2s ease;
+}
+
+    .contact-info .d-flex:hover {
+        transform: translateX(5px);
+    }
+
+.social-links .btn {
+    transition: all 0.3s ease;
+}
+
+    .social-links .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+/* About Page Styles */
+.value-icon {
+    transition: transform 0.3s ease;
+}
+
+    .value-icon:hover {
+        transform: scale(1.1);
+    }
+
+/* Card hover effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+    }
+
+
+/* Product details */
+.product-gallery img {
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section .display-4 {
+        font-size: 2rem;
+    }
+
+    .feature-item {
+        padding: 1rem 0.5rem;
+    }
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .product-img {
+        height: 350px;
+    }
+
+    .image-actions {
+        opacity: 1;
+    }
+}
+/* Fallback styling if image doesn't load */
+.product-img:before {
+    content: "📷 Image not available";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    color: #6c757d;
+    font-size: 1rem;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .product-image-container {
+        height: 200px; /* Slightly smaller on mobile */
+    }
+
+    .product-name {
+        font-size: 0.9rem;
+        min-height: 2.4rem;
+    }
+
+ 
 }

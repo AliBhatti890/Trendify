@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Login - Trendify";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card border-0 shadow-lg">
+                <div class="card-header bg-gradient-primary text-white text-center py-4">
+                    <div class="login-icon bg-white rounded-circle mx-auto mb-3" style="width: 80px; height: 80px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-sign-in-alt fa-2x text-primary"></i>
+                    </div>
+                    <h3 class="mb-0">Welcome Back</h3>
+                    <p class="mb-0 opacity-75">Sign in to your Trendify account</p>
+                </div>
+                <div class="card-body p-4">
+                    <form asp-action="Login" method="post">
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger">
+                                @Html.ValidationSummary(true)
+                            </div>
+                        }
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="fas fa-envelope text-muted"></i>
+                                </span>
+                                <input type="email" class="form-control border-start-0" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-end-0">
+                                    <i class="fas fa-lock text-muted"></i>
+                                </span>
+                                <input type="password" class="form-control border-start-0" id="password" name="password" placeholder="Enter your password" required>
+                            </div>
+                        </div>
+
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-primary btn-lg py-2">
+                                <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                            </button>
+                        </div>
+
+                        <div class="text-center mb-3">
+                            <a href="#" class="text-muted text-decoration-none">Forgot your password?</a>
+                        </div>
+                    </form>
+
+                    <div class="text-center">
+                        <p class="mb-0 text-muted">
+                            Don't have an account?
+                            <a href="@Url.Action("Register", "Account")" class="text-primary text-decoration-none fw-bold">Create one here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="row mt-4 text-center">
+                <div class="col-4">
+                    <div class="feature-item">
+                        <i class="fas fa-shipping-fast text-primary mb-2"></i>
+                        <p class="small mb-0">Free Shipping</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt text-success mb-2"></i>
+                        <p class="small mb-0">Secure</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="feature-item">
+                        <i class="fas fa-headset text-warning mb-2"></i>
+                        <p class="small mb-0">24/7 Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #4a6de5 0%, #6c8eff 100%);
+    }
+
+    .login-icon {
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .feature-item {
+        padding: 10px;
+    }
+
+        .feature-item i {
+            font-size: 1.5rem;
+        }
+</style>
